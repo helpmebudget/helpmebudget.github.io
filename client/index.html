@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="../assets/Help Me Budget (1).png" rel="icon">
+    <script defer src="app.js"></script>
+    <title>Help Me Budget</title>
+</head>
+<body>
+    <div class="fader">
+        <header id="head">
+            <script src="nav.js"></script>
+        </header>
+        <div id="main-content">
+            <span id="welcome">
+                <span>
+                    <span class="row align-items-center">
+                        <h1>Welcome to Help Me Budget</h1>
+                        <h4>Take this short quiz and we'll help you spend your money wisely.</h4>
+                        <a><button id="btn1">Get Started</button></a>
+                    </span>
+                </span>
+            </span>
+                <question id="q1" hidden>
+                    <h1>How often are you paid?</h1>
+                    <span class="q1span">
+                        <input type="radio" name="freq" id="daily" value="4">
+                        <label for="daily">Daily</label><br>
+
+                        <input type="radio" name="freq" id="weekly" value="4">
+                        <label for="weekly">Weekly</label><br>
+
+                        <input type="radio" name="freq" id="bi-weekly" value="2">
+                        <label for="bi-weekly">Bi-Weekly or Semi-Monthly</label><br>
+
+                        <input type="radio" name="freq" id="monthly" value="1">
+                        <label for="monthly">Monthly</label><br>
+
+                        <input type="radio" name="freq" id="never" value="0">
+                        <label for="never">I don't get paid, or I am not paid regularly</label><br>
+                        <button type="button" id="btn2">Next ></button>
+                    </span>
+                </question>
+                <question id="q1aa" class="container" hidden>
+                    <h1>How many days a week do you work on average?</h1>
+                    <input type="number" id="daysperweek"><br>
+                    <button type="button" id="btn3">Next ></button>
+                </question>
+                <question id="q1a" class="container" hidden>
+                    <h1>Every time you are paid, how much money are you given?</h1>
+                    $ <input type="number" id="pay">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="information">Input your pay in USD, and exclude taxes.</span><br>
+                    <button type="button" id="btn4">Next ></button>
+                </question>
+                <question id="q2" class="container" hidden>
+                    <h1>How many people are in your family?</h1>
+                    <input type="number" id="adultsize" class="widebutton" placeholder="Number of adults (18+)">
+                    <input type="number" id="childsize" class="widebutton" placeholder="Number of children (0-17)"><br>
+                    <button type="button" id="btn5">Next ></button>
+                </question>
+                <question id="q3" class="container" hidden>
+                    <h1>Let's break down your monthly spending.</h1>
+                    <div class="information">Leave any box empty if it does not apply to you.</div><br>
+                    <div class="container">
+                        <span class="row">
+                            <span class="col-sm">
+                                Rent or mortgage<br>
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="rentmortgage" placeholder=""><br>
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                House utilities
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="homeutil" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                Insurance (life, medical, home, auto, etc.)
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="insurance" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                Transportation
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="transportation" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                Health
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="health" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                Food
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="food" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                Personal expenses (clothing, leisure, etc.)
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="personal" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row">
+                            <span class="col-sm">
+                                Savings
+                            </span>
+                            <span class="col-sm">
+                                $<input type="number" id="savings" placeholder="">
+                            </span>
+                            <span class="col-sm"></span>
+                            <span class="col-sm"></span>
+                        </span><hr>
+                        <span class="row information" id="remnants"></span>
+                    </div>
+                    <button type="button" id="btn6">Next ></button>
+                </question>
+                <question id="q4" class="container" hidden>
+                    <h3>Generating your results...</h3>
+                    <div id="progressbar">
+                        <div id="progress"></div>
+                    </div><br>
+                    <div><h5 id="done"></h5></div>
+                </question>
+                <question id="res" hidden>
+                    <div id="icons">
+                        <img id="home" src="https://icons-for-free.com/iconfiles/png/512/home+house+icon-1320087051499461146.png" width="50">
+                        <img id="print" src="https://freeiconshop.com/wp-content/uploads/edd/print-outline.png" width="30"><br>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm results">
+                                <h4>Your results</h4><br>
+                                <b><span id="overview" style="color: aquamarine;"></span></b><br>
+                                <ul id="results-list">
+                                    <li>
+                                        <span id="suggestion"></span>
+                                        <span id="percentage" style="color:orange;"></span>
+                                        <span id="suggestion2"></span>
+                                    </li>
+                                </ul><br>
+                                <h5>Take a look at the pie chart on the right to analyze your results.</h5>
+                            </div>
+                            <span class="col-sm">
+                                <canvas id="piechart" style="width:100%;max-width:600px"></canvas>
+                            </span>
+                        </div>
+                    </div>
+                </question>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

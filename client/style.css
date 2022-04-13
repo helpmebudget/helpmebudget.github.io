@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Andada+Pro);
+@import url(https://fonts.googleapis.com/css?family=Public+Sans);
+
+@font-face {
+    font-family: "FakeReceipt";
+    src: url("../assets/FakeReceipt.otf");
+}
+
+body {
+    font-family: 'Public Sans', 'Andada Pro', monospace;
+    background-color: #184d94;
+    color: white;
+}
+
+nav {
+    font-family: 'Public Sans', 'Andada Pro', monospace;
+    padding: 12px 20px;
+    color: whitesmoke;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+#q4 {
+    font-family: 'FakeReceipt', 'Public Sans', 'Andada Pro', monospace;
+}
+
+.results {
+    font-family: 'Public Sans', 'Andada Pro', monospace;
+    background-color: #1f57a0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#results-list {
+    list-style-type: none;
+}
+
+#main-content {
+    padding: 250px 60px;
+}
+
+#print {
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(0) invert(1);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#home {
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(0) invert(1);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#icons {
+    text-align: center;
+}
+
+#about-main {
+    padding: 180px 60px;
+}
+
+nav.scrolled {
+    background-color: white;
+    animation-duration: 325ms;
+    animation-name: fadein;
+    opacity: 100%;
+}
+
+#webtitle {
+    font-size: 34px;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.widebutton {
+    width: 250px;
+}
+
+a:hover {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+a.scrolled {
+    color:#6c6c6c;
+}
+
+.navbar-spacer {
+    padding: 40px;
+}
+
+button {
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+.fader {
+    background-color: transparent;
+    animation-duration: 3s;
+    animation-name: fadein;
+}
+
+.questiontitle {
+    display: inline;
+}
+
+.required {
+    color: red;
+    vertical-align: super;
+    size: 5px;
+}
+
+.main-form {
+    background-color: bisque;
+    height: 500px;
+    color: gray;
+}
+
+.q1span {
+    size: 50px;
+}
+
+question {
+    display: inline;
+}
+
+.information {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fadeoutandup {
+    animation-duration: 5000ms;
+    animation-name: fadein;
+}
+
+.fadeout {
+    animation-duration: 1000ms;
+    animation-name: fadeout;
+    background-color: transparent;
+}
+
+.fadein {
+    animation-duration: 1000ms;
+    animation-name: fadein;
+    background-color: transparent;
+}
+
+button {
+    margin-top: 20px;
+}
+
+#progressbar {
+    width: 30%;
+    background-color: #1f57a0;
+}
+
+#progress {
+    width: 1%;
+    height: 15px;
+    background-color: white;
+}
+
+@keyframes fadein {
+    0% { opacity: 0%; }
+    100% { opacity: 100%; }
+}
+
+@keyframes fadeout {
+    0% { opacity: 100%; }
+    100% { opacity: 0%; }
+}
+
+@keyframes identifier {
+    
+}
